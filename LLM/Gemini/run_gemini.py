@@ -82,12 +82,12 @@ if __name__ == '__main__':
     device = torch.device("cuda:0")
 
     # dataset based on subject
-    subject = 'V'
+    subject = 'S'
     dataset = Multiple_Choice_Dataset('/data/npl/ReasoningCTT/LLM/Dataset/qas.json')
     sub_dataset = dataset.getBaseOnSubject(subject)
     # new_dataset = sub_dataset.getQuestionFromIdToEnd('V11B1200135')
 
-    file_path = '/data/npl/ReasoningCTT/LLM/Gemini/Result/gemini_van_result.json'
+    file_path = '/data/npl/ReasoningCTT/LLM/Gemini/Result/gemini_su_result.json'
     
     with open(file_path, 'a', encoding='utf-8') as file:
         file.write('[\n')
